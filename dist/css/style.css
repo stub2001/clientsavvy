@@ -855,8 +855,8 @@ html {
  * heading hierarchy.
  */
 h1, .alpha {
-  font-size: 80px;
-  font-size: 5rem;
+  font-size: 100px;
+  font-size: 6.25rem;
   line-height: 1.2; }
 
 h2, .beta {
@@ -2452,4 +2452,5 @@ label,
  */
 html {
   font-family: sans-serif;
-  padding: 24px; }
+  padding: 24px;
+  background: red; }
