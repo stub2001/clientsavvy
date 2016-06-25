@@ -855,9 +855,9 @@ html {
  * heading hierarchy.
  */
 h1, .alpha {
-  font-size: 30px;
-  font-size: 1.875rem;
-  line-height: 1.6; }
+  font-size: 80px;
+  font-size: 5rem;
+  line-height: 1.2; }
 
 h2, .beta {
   font-size: 30px;
@@ -2450,3 +2450,6 @@ label,
 /**
  * She’s all yours, cap’n... Begin importing your stuff here.
  */
+html {
+  font-family: sans-serif;
+  padding: 24px; }
