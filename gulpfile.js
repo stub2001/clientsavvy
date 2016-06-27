@@ -21,7 +21,7 @@ gulp.task('browserSync', function() {
 
 // Lint Task
 gulp.task('lint', function() {
-    return gulp.src('js/*.js')
+    return gulp.src('src/js/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
@@ -38,8 +38,8 @@ gulp.task('sass', function() {
 
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
-    return gulp.src('js/*.js')
-        .pipe(concat('all.js'))
+    return gulp.src('src/js/*.js')
+        .pipe(concat('js/all.js'))
         .pipe(gulp.dest('dist'))
         .pipe(rename('all.min.js'))
         .pipe(uglify())
@@ -48,10 +48,10 @@ gulp.task('scripts', function() {
 
 // Watch Files For Changes
 gulp.task('watch', ['browserSync', 'sass'], function() {
-    gulp.watch('js/*.js', ['lint', 'scripts']);
+    gulp.watch('src/js/*.js', ['lint', 'scripts']);
     gulp.watch('src/css/**/*.scss', ['sass']);
     gulp.watch('*.html', browserSync.reload); 
- //  gulp.watch('app/js/**/*.js', browserSync.reload); // configure JS watcher
+   gulp.watch('src/js/*.js', browserSync.reload);
 });
 
 
